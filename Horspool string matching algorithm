@@ -1,0 +1,68 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+#define SIZE 256
+
+int Table[SIZE];
+
+// Function to build shift table
+void shiftTable(char P[]) {
+    int i, m;
+    m = strlen(P);
+
+    // Initialize all values with pattern length
+    for (i = 0; i < SIZE; i++)
+        Table[i] = m;
+
+    // Fill shift values based on pattern
+    for (i = 0; i < m - 1; i++)
+        Table[(unsigned char)P[i]] = m - 1 - i;
+}
+
+// Horspool string matching function
+int horspool(char T[], char P[]) {
+    int i, k, n, m;
+
+    n = strlen(T);
+    m = strlen(P);
+
+    i = m - 1;
+
+    while (i < n) {
+        k = 0;
+
+        while (k < m && P[m - 1 - k] == T[i - k]) {
+            k++;
+        }
+
+        if (k == m)
+            return i - m + 1;  // Match found
+        else
+            i = i + Table[(unsigned char)T[i]];
+    }
+
+    return -1;  // No match
+}
+
+// Main function
+int main() {
+    char T[50], P[20];
+    int pos;
+
+    printf("Enter text:\n");
+    scanf("%s", T);
+
+    printf("Enter pattern:\n");
+    scanf("%s", P);
+
+    shiftTable(P);
+    pos = horspool(T, P);
+
+    if (pos == -1)
+        printf("Pattern not found\n");
+    else
+        printf("Pattern found at position %d\n", pos);
+
+    return 0;
+}
