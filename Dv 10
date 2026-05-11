@@ -1,0 +1,65 @@
+EXERCISE 10
+Explore a dataset, identify trends and outliers, create basic visuals, and present insights
+Objective
+To explore a real-world dataset, identify trends and outliers, create meaningful visuals, and communicate insights effectively using Power BI.
+Procedure
+Step 1: Load the Dataset
+Open Power BI Desktop.
+Click Home → Get Data.
+Select the dataset (Excel / CSV / Database).
+Click Load.
+Step 2: Clean and Model the Data
+Data Cleaning (Power Query):
+Click Transform Data.
+Perform the following:
+Remove duplicates
+Handle missing values
+Rename columns
+Change data types
+Click Close & Apply.
+Data Modeling:
+Open Model View.
+Create proper relationships.
+Verify cardinality and filter direction.
+Step 3: Explore Data and Identify Patterns
+Use Data View to inspect distributions.
+Create quick visuals:
+Sales by Year → Trend analysis
+Sales by Category → Performance comparison
+Identify:
+Increasing / decreasing trends
+Sseasonal patterns
+High or low-performing categories
+
+
+Step 4: Identify Outliers
+Create:
+Column charts
+Line charts
+Tables with sorting
+Look for:
+Extremely high or low values
+Sudden spikes or drops
+Use Top N filter or conditional formatting to highlight outliers.
+Step 5: Create Dashboard
+Combine:
+KPI Cards
+Charts
+Tables
+Slicers
+Ensure all visuals interact properly.
+Apply consistent formatting.
+Step 6: Write Key Insights
+Add insights using Text Boxes or prepare a separate report.
+Example Insights:
+Sales increased steadily over the last 3 years.
+The Electronics category contributes the highest revenue.
+Certain regions show unusually low sales indicating potential issues.
+A few products generate exceptionally high profits.
+Expected Output
+Interactive dashboard showing trends and outliers
+Clean and structured visuals
+Clear insight summary based on data analysis
+
+
+
